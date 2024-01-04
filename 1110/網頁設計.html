@@ -40,26 +40,26 @@ if (m5>m4+md){
 document.writeln("不能形成三角形");
 }
 else{
-document.writeln("三角形面積")
-document.writeln("<font color=red size=5>"+m2+"</font>")
-if ((x1==y1)&&(x1==z1)&&(y1==z1)){
-	document.writeln("正三角形");
-}
-else{
-	if(m6>m8+m7){
+	document.writeln("三角形面積")
+	document.writeln("<font color=red size=5>"+m2+"</font>")
+	if ((x1==y1)&&(x1==z1)&&(y1==z1)){
+		document.writeln("正三角形");
+	}
+	else{
+		if(m6>m8+m7){
 		document.writeln("鈍角三角形");
 	}
 	else {
 		if(m6=m8+m7){
-		document.writeln("直角三角形");
-	}
+			document.writeln("直角三角形");
+		}
 
 		else{
-		document.writeln("銳角三角形");
+			document.writeln("銳角三角形");
 		}
 	}
 }
-}
+
 var b1=parseInt(m2/x);
 var b2=(y)^2;
 var b3=b1^2;
