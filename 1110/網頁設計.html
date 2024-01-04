@@ -1,0 +1,70 @@
+<html>
+<head>
+<link rel="icon" href= "favicon.ico" type="image/x-icon">
+<title> wfsh102張栢睿多元選修作業 </title>
+</head>
+<body>
+<canvas id="c" width="600" height="600"></canvas>
+<script>
+document.writeln("歡應參觀並測試我的作業");
+var name=window.prompt("您的姓名是?");
+document.writeln("<font color=red size=5>"+name+"</font><br>");
+document.writeln("三角形-1邊");
+var x=parseInt(prompt("三角形-1邊是多少"));
+document.writeln("<font color=red size=5>"+x+"</font>");
+document.writeln("三角形-2邊");
+var y=parseInt(prompt("三角形-2邊是多少"));
+document.writeln("<font color=red size=5>"+y+"</font>");
+document.writeln("三角形-3邊");
+var z=parseInt(prompt("三角形-3邊是多少"));
+document.writeln("<font color=red size=5>"+z+"</font>");
+var x1=x^2;
+var y1=y^2;
+var z1=z^2;
+var s1=x1+y1+z1;
+var s2=s1/2;
+var a1=s2-x1;
+var a2=s2-y1;
+var a3=s2-z1;
+var x1=a1*a2*a3;
+var m1=x1*s2;
+var m2=Math.sqrt(y1);
+if (y1<=0){
+document.writeln("不能形成三角形")
+}
+else{
+document.writeln("三角形面積")
+document.writeln("<font color=red size=5>"+m2+"</font>")
+if ((x1==y1)&&(x1==z1)&&(y1==z1)){
+	document.writeln("正三角形");
+}
+else{
+	if((x1>y1+z1)||(y1>z1+x1)||(z1>y1+x1)){
+		document.writeln("鈍角三角形");
+	}
+	else if((x1==y1+z1)||(y1==x1+z1)||(z1==y1+x1)){
+		document.writeln("直角三角形");
+	}
+	else{
+		document.writeln("銳角三角形");
+	}
+}
+}
+var b1=parseInt(m2/x)
+var b2=(y)^2
+var b3=b1^2
+var b4=b2-b3
+var b5=parseInt(Math.sqrt(b4))
+var canvas = document.getElementById('c');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(x,0);
+ctx.lineTo(b5,b1);
+ctx.lineTo(0,0)
+ctx.closePath();
+ctx.fill();
+</script>
+<H2><font style="font-size: .30in; font-weight: bold; color: #1900FF">請把數字放大效果會好一點約在100-500</font><br></H2>
+</body>
+</html>
