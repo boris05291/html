@@ -42,11 +42,14 @@ else{
 	if((x1>y1+z1)||(y1>z1+x1)||(z1>y1+x1)){
 		document.writeln("鈍角三角形");
 	}
-	else if((x1==y1+z1)||(y1==x1+z1)||(z1==y1+x1)){
+	else {
+		if((x1==y1+z1)||(y1==x1+z1)||(z1==y1+x1)){
 		document.writeln("直角三角形");
 	}
-	else{
+
+		else{
 		document.writeln("銳角三角形");
+		}
 	}
 }
 }
